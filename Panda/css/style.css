@@ -1,0 +1,127 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Custom Panda Styles*/
+
+.main{
+	width:90%;
+	margin:0 auto;
+}
+header h1{
+	font-family: 'Coiny', cursive;
+	font-size:45px;
+	text-align:center;
+	margin-top:25px;
+}
+
+ /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  top: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 90%;
+}
+
+#gallery{
+	display:flex;
+	flex-wrap: wrap;
+}
+#gallery a{ 
+	max-width: 19%;
+	height: auto;
+	text-align: center;
+	flex-grow: 1;
+	justify-content: space-around;
+	margin: 0 4px;
+	border: 2px solid #fff;
+	transition: all 0.5s ease-in-out;
+	overflow:hidden;
+	height:200px;
+
+}
+#gallery a:nth-child(even):hover{
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	filter:sepia(100%);
+
+}
+#gallery a:nth-child(odd):hover{
+	border-top-left-radius:20px;
+	border-bottom-right-radius:20px;
+	filter:blur(1px);
+
+}
+#gallery a img{
+	max-height:100%;
+}
+#description p{
+	font-family: 'Ubuntu', sans-serif;
+	padding: 30px;
+	text-align: justify;
+}
+footer p{
+	font-family: 'Indie Flower', cursive;
+	padding:15px;
+	font-size:20px;
+	text-align:center;
+}
+footer p a{
+	color:#903;
+	text-decoration:none;
+}
+footer p a:hover{
+	color:#fff;
+	font-weight:bolder;
+	text-decoration:underline;
+}

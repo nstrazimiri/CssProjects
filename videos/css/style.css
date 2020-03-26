@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* CUSTOM STYLE */
+body{
+	background: url('bg.jpg');
+	background-size: cover;
+}
+section{
+	width: 80%;
+	margin: 0 auto;
+	background: rgba(255,255,255,.6);
+	padding: 20px;
+}
+video{
+	clear: both;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+h1{
+	font-family: 'Quicksand', sans-serif;
+	font-size:45px;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+ul{
+	float: left;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+li{
+	transform: rotate3d(0);
+	transition: .5s;
+	width: 200px;
+	background: #903;
+	display: block;
+	float: left;
+	margin-left: 15px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	font-size: 27px;
+	border-radius: 10px;
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 60px 10px 40px 10px;
+	box-sizing: border-box;
+	min-height: 190px;
+	border: 1px inset #fff;
+}
+li:hover{
+	-webkit-transform: rotateX(68deg) rotateY(30deg) rotateZ(-58deg) scale(1.4) skewX(18deg) skewY(-9deg);
+-moz-transform: rotateX(68deg) rotateY(30deg) rotateZ(-58deg) scale(1.4) skewX(18deg) skewY(-9deg);
+-ms-transform: rotateX(68deg) rotateY(30deg) rotateZ(-58deg) scale(1.4) skewX(18deg) skewY(-9deg);
+-o-transform: rotateX(68deg) rotateY(30deg) rotateZ(-58deg) scale(1.4) skewX(18deg) skewY(-9deg);
+transform: rotateX(68deg) rotateY(30deg) rotateZ(-58deg) scale(1.4) skewX(18deg) skewY(-9deg);
+opacity: .7;
+}
+li i{
+	display: block !important;
+	padding-top: 10px;
+}
+p{
+	margin-top: 50px;
+	color: #18686b;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+
+}

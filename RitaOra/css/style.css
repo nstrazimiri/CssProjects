@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Krub:200,400');
+/******************************************
+*******************************************
+Website Name: Game Of Thrones
+Website URL: https://nstrazimiri.scweb.ca/WEB210CSS/gameOfThrones
+Website Author: Ndriçim Strazimiri
+Author Url: strazi.ca
+Modified Date: January 2019
+
+Color Guide
+*****************
+903 - Red Brick
+fff - White
+000 - Black
+
+Typography Guide
+*********************
+Headings - GOT 30px
+Body - Serif 18px
+
+***********************************/
+
+/**********************************
+***********************************
+
+0. CSS Reset by Eric Meyer ---index
+1. Font Declaration ----------index
+2. Body & Body main wrapper --index
+3. Header --------------------index
+4. Headings & Drop Cap -------index
+5. Seasons -------------------index
+6. Parallax ------------------index
+7. Gallery -------------------index
+8. Footer --------------------index
+
+**********************************/
+/*-----------------------------------
+------------------------------------- 
+0. CSS Reset by Eric Meyer
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+-------------------------------------
+------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*-----------------------------------
+------------------------------------- 
+2. Body & Body main wrapper
+-------------------------------------
+------------------------------------*/
+body{
+    background: linear-gradient(30deg,#c6bac6,#d8a3bd,#c6bac6);
+}
+body>section:first-child{
+	width:100%;
+	height:100%;
+	background-image: url('../img/BG.jpg');
+	background-size: 100% 100%;
+	background-position:center center;
+}
+body>aside.show{
+	opacity:1;
+}
+body>aside>nav>ul:before{
+	content: "♫";
+	position: absolute;
+	top: -8px;
+	left: 66px;
+	color: #fff;
+	font-size: 35px;
+}
+body>aside{
+	padding: 10px 20px;
+	position: fixed;
+	top: 90px;
+	opacity: 0;
+	transition: all 4s ease;
+}
+body>section>h1{
+	position: absolute;
+	top: 45%;
+	left: 15%;	
+}
+body>div:first-child,body>div:nth-child(3){
+    width: 1000px;
+    margin: 0 auto;
+	padding: 25px;
+	box-sizing: border-box;
+	
+}
+body>div>section:first-of-type{
+	background-image: url('../img/signature.png');
+    background-position: center;
+	background-attachment: fixed;
+	padding: 15px;
+}
+body>div>section:first-of-type p a{
+	text-decoration: none;
+	color: #903;
+	font-weight: 600;
+	font-style: italic;
+}
+body>div>section:first-of-type p a img{
+    position: fixed;
+    top: 450px;
+    left: 52%;
+    display: none;
+}
+body>div>section:first-of-type p a:hover>img{
+    display: block;
+}
+body p{
+    text-align: justify;
+	font-family: 'Krub', sans-serif;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 200;
+}
+body p strong{
+    font-weight: 400;
+}
+/*-----------------------------------
+------------------------------------- 
+3. Header
+-------------------------------------
+------------------------------------*/
+header{
+    margin: 20px 0;
+}
+section>h1{
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+	font-size: 80px;
+	color: #c77872;
+	text-shadow: 2px 2px 1px #4d3e43;
+}
+header h2{
+    font-family: serif;
+    font-weight: 100;
+    font-variant: small-caps;
+    text-align: center;
+	font-size: 25px;
+}
+aside nav{
+	padding: 20px 27px;
+	margin: 5px 20px;
+	border: 1px solid #fff;
+}
+aside nav:before {
+	content: " ";
+	position: absolute;
+	z-index: -1;
+	top: 19px;
+	left: 44px;
+	right: 36px;
+	bottom: 11px;
+	border: 1px solid #fff;
+}
+aside nav li{
+	margin:5px 0;
+}
+aside nav li:hover{
+	background: linear-gradient(-6deg,#c77872 50%,#4d3e43 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+aside nav li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+	font-family: 'Krub', sans-serif;
+	font-variant:small-caps;
+}
+body>div:nth-child(3)>article:first-child>h2{
+	padding-top: 40px;
+}
+/*-----------------------------------
+------------------------------------- 
+4. Headings & Drop Cap
+-------------------------------------
+------------------------------------*/
+article h2,section h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    font-weight: 100;
+    color: #903;
+    margin-top: 20px;
+	margin-bottom: 15px;
+	text-align:center;
+}
+
+body>div>section:nth-child(2)>p,body>div>section:nth-child(4)>p{
+	clear:left;
+}
+body>div>section:nth-child(2)>article img:hover{
+	outline-offset: -10px;
+}
+body>div>section:nth-child(2)>article a:hover{
+	background: linear-gradient(135deg,#903 90%,#fff 90%,#903 97%);
+}
+body>div>section:nth-child(2)>article a{
+	text-decoration:none;
+	font-family: 'Krub', sans-serif;
+	font-size:18px;
+	color:#fff;
+	padding:5px 10px;
+	background: linear-gradient(135deg,#903 90%,#fff 90%,#903 93%);
+}
+body>div>section:nth-child(2)>article img{
+	max-width:100%;
+	outline: 1px solid #fff;
+	outline-offset: -5px;
+	transition: all 0.5s ease;
+	margin-bottom: 10px;
+}
+body>div>section:nth-child(2)>article{
+	width:220px;
+	float:left;
+	margin-left: 10px;
+	margin-top: 25px;
+}
+
+body>div>section:nth-child(3)>article{
+	border-bottom:1px solid #fff;
+}
+body>div>section:nth-child(3)>article>p{
+	display:inline-block;
+	width: 37%;
+	text-align: center;
+	vertical-align: top;
+}
+body>div>section:nth-child(3)>article>p:nth-child(3){
+	cursor: pointer;
+	border: 1px solid #fff;
+	background: #ffb3ab;
+	color: #fff;
+	width: 150px;
+	padding: 3px 5px;
+	margin-left: 70px;
+}
+body>div>section:nth-child(4)>article{
+	width:310px;
+	height:250px;
+	float:left;
+	filter: grayscale(100%);
+	margin-left: 5px;
+	margin-top: 5px;
+	background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor:cell;
+}
+
+body>div>section:nth-child(4)>article:hover{
+	filter:none;
+}
+body>div>section:nth-child(4)>article:nth-child(2){
+	background:url('../img/gallery1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(3){
+	background:url('../img/gallery2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(4){
+	background:url('../img/gallery3.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(5){
+	background:url('../img/gallery4.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(6){
+	background:url('../img/gallery5.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(7){
+	background:url('../img/gallery6.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(8){
+	background:url('../img/gallery7.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(9){
+	background:url('../img/gallery8.jpg');
+	background-size: cover;
+	background-position: center;
+}
+body>div>section:nth-child(4)>article:nth-child(10){
+	background:url('../img/gallery9.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+/*-----------------------------------
+------------------------------------- 
+8. Footer
+-------------------------------------
+------------------------------------*/
+footer p{
+	padding:15px 5px;
+	font-size:20px;
+	font-family:serif;
+	text-align:center !important;
+	font-variant:small-caps;
+}
+footer a[target="_blank"]{
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#903;
+	font-family: 'Krub', sans-serif;
+	font-size:13px;
+}
+footer a[target="_blank"]:hover{
+	text-decoration:line-through;
+	color:#900;
+}

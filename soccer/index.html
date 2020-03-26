@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>Soccer | Football</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="main">
+      <article id="animations">
+        <img src="images/ball.png" alt="Ball" id="ball">
+        <img id="ronaldo" src="images/cronaldo.png" alt="C.Ronaldo" title="Cristiano Ronaldo Bicycle Kick">
+      </article>
+      <h1>Soccer</h1>
+      <article>
+        <p>Association football, more commonly known as football or soccer,[a] is a team sport played with a spherical ball between two teams of eleven players. It is played by 250 million players in over 200 countries and dependencies, making it the world's most popular sport.
+           The game is played on a rectangular field called a pitch with a goal at each end. The object of the game is to score by moving the ball beyond the goal line into the opposing goal.</p>
+        <p>Association football is one of a family of football codes, which emerged from various ball games played worldwide since antiquity. The modern game traces its origins to 1863 when the Laws of the Game were originally codified in England by The Football Association.</p>
+        <p>Players are not allowed to touch the ball with hands or arms while it is in play, except for the goalkeepers within the penalty area. Other players mainly use their feet to strike or pass the ball, but may also use any other part of their body except the hands and the arms. </p>
+        <p>The team that scores most goals by the end of the match wins. If the score is level at the end of the game, either a draw is declared or the game goes into extra time or a penalty shootout depending on the format of the competition. Association football is governed internationally by the International Federation of Association Football (FIFA; French: Fédération Internationale de Football Association), which organises World Cups for both men and women every four years.</p>
+      </article>
+      <article class="img-container">
+        <figure>
+            <img src="images/maldini.jpg" alt="Maldini">
+            <figcaption>Ac Milan Legen, Paolo Maldini</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ronaldo.jpg" alt="Ronaldo">
+            <figcaption>Brasilian Legend, Ronaldo Lima</figcaption>
+        </figure>
+        <figure>
+            <img src="images/zidane.jpg" alt="Zidane">
+            <figcaption>France Legend, Zinedine Zidane</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ronaldinho.jpg" alt="Ronaldinho">
+            <figcaption>Fc Barcelona Legend, Ronaldinho</figcaption>
+        </figure>
+        <figure>
+            <img src="images/maradona.jpg" alt="Maradona">
+            <figcaption>Argentinas Legend, Diego Armando Maradona</figcaption>
+        </figure>
+        <figure>
+            <img src="images/pele.jpg" alt="Pele">
+            <figcaption>Brasilian Legend, Pele</figcaption>
+        </figure>
+      </article>
+    </section>
+    <script type="text/javascript">
+      window.addEventListener('scroll', function(e) {
+        let ronaldo=document.querySelector("#ronaldo");
+        let ball=document.querySelector("#ball");
+        let currentAngle=-50;
+        let currentLeft=5;
+        let currentTop=100;
+        ronaldo.style=`transform: rotate(${parseInt(currentAngle+window.scrollY/5)}deg);`;
+        ball.style=`left:${parseInt(currentLeft+window.scrollY*1.5)}px;top:${parseInt(currentTop-window.scrollY/5)}px;`;
+        console.log(parseInt(currentAngle+window.scrollY/5));
+      }
+    );
+    </script>
+  </body>
+</html>

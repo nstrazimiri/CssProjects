@@ -1,0 +1,273 @@
+@font-face{
+    font-family:'GOT';
+    src:url('fonts/GOT.ttf');
+}
+/******************************************
+*******************************************
+Website Name: Game Of Thrones
+Website URL: https://nstrazimiri.scweb.ca/WEB210CSS/gameOfThrones
+Website Author: Ndriçim Strazimiri
+Author Url: strazi.ca
+Modified Date: January 2019
+
+Color Guide
+*****************
+903 - Red Brick
+fff - White
+000 - Black
+
+Typography Guide
+*********************
+Headings - GOT 30px
+Body - Serif 18px
+
+***********************************/
+
+/**********************************
+***********************************
+
+0. CSS Reset by Eric Meyer ---index
+1. Font Declaration ----------index
+2. Body & Body main wrapper --index
+3. Header --------------------index
+4. Headings & Drop Cap -------index
+5. Seasons -------------------index
+6. Parallax ------------------index
+7. Gallery -------------------index
+8. Footer --------------------index
+
+**********************************/
+/*-----------------------------------
+------------------------------------- 
+0. CSS Reset by Eric Meyer
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+-------------------------------------
+------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-----------------------------------
+------------------------------------- 
+1. Font Declaration
+-------------------------------------
+------------------------------------*/
+
+/*-----------------------------------
+------------------------------------- 
+2. Body & Body main wrapper
+-------------------------------------
+------------------------------------*/
+body{
+    background-image: url('../img/BG.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+body>div:first-child,body>div:nth-child(3){
+    width: 1100px;
+    margin: 0 auto;
+	padding: 25px;
+	box-sizing: border-box;
+	
+}
+body>div:first-child{
+	background: linear-gradient(to bottom,rgba(255,255,255,.6) 95%,rgba(255,255,255,.0)99%);
+	box-shadow: 0px -18px 15px white;
+}
+body>div:nth-child(3){
+	background: linear-gradient(to top,rgba(255,255,255,.6) 95%,rgba(255,255,255,.0)99%);
+	box-shadow: 0px 18px 15px white;
+}
+body p{
+    text-align: justify;
+	font-family: serif;
+    margin: 20px 0;
+    font-size: 18px;
+}
+/*-----------------------------------
+------------------------------------- 
+3. Header
+-------------------------------------
+------------------------------------*/
+header{
+    margin: 20px 0;
+}
+header h1{
+    font-family: 'GOT';
+    text-align: center;
+	font-size: 39px;
+}
+header h2{
+    font-family: serif;
+    font-weight: 100;
+    font-variant: small-caps;
+    text-align: center;
+	font-size: 25px;
+}
+header nav{
+	margin:15px 0;
+}
+header nav li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:18px;
+	font-variant:small-caps;
+}
+header nav li:hover{
+	border-bottom:3px solid #fff;
+	margin-bottom:-3px;
+}
+header nav li{
+	display:inline-block;
+	list-style-type:none;
+	background:#903;
+	padding:7px 15px;
+}
+article:target h2,section:target h2{
+	border-bottom:2px solid #fff;
+	display:inline-block;
+}
+body>div:nth-child(3)>article:first-child>h2{
+	padding-top: 40px;
+}
+/*-----------------------------------
+------------------------------------- 
+4. Headings & Drop Cap
+-------------------------------------
+------------------------------------*/
+article h2,section h2{
+    font-family: 'GOT';
+    font-variant: small-caps;
+    font-size: 30px;
+    font-weight: 600;
+    color: #404b57;
+    margin-top: 20px;
+	margin-bottom: 15px;
+}
+body>div:first-child>section:first-of-type>p:first-child::first-letter{
+  color: #903;
+  float: left;
+  font-family: 'GOT';
+  font-size: 40px;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-left: 0px;      
+}
+/*-----------------------------------
+------------------------------------- 
+5. Seasons
+-------------------------------------
+------------------------------------*/
+body>div:nth-child(3)>section:first-of-type>article{
+    width:255px;
+    height: auto;
+    float: left;
+    margin-left: 7px;
+    margin-top: 15px;
+}
+body>div:nth-child(3)>section:first-of-type>article p{
+    text-align: center;
+    font-size: 25px;
+    font-variant: small-caps;
+    margin: 15px;
+}
+body>div:nth-child(3)>section:first-of-type>article p span{
+    display: block;
+    font-size: 35px;
+    margin-top: -5px;
+}
+body>div:nth-child(3)>section:first-of-type>article img{
+    max-width: 100%;
+	border: 1px solid transparent;	
+	padding: 2px;
+}
+body>div:nth-child(3)>section:first-of-type>article img:hover{
+    border: 1px solid white;	
+	padding: 2px;
+}
+/*-----------------------------------
+------------------------------------- 
+6. Parallax
+-------------------------------------
+------------------------------------*/
+body>div:nth-child(2){
+	width:1100px;
+	height:300px;
+}
+body>div:nth-child(3)>section:nth-child(3){
+    clear:left;
+}
+/*-----------------------------------
+------------------------------------- 
+7. Gallery
+-------------------------------------
+------------------------------------*/
+body>div:nth-child(3)>section:nth-child(4) a img{
+	width:250px;
+}
+/*-----------------------------------
+------------------------------------- 
+8. Footer
+-------------------------------------
+------------------------------------*/
+footer p{
+	padding:15px 5px;
+	font-size:20px;
+	font-family:serif;
+	text-align:center !important;
+	font-variant:small-caps;
+}
+footer a[target="_blank"]{
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#903;
+	font-family:'GOT';
+	font-size:13px;
+}
+footer a[target="_blank"]:hover{
+	text-decoration:line-through;
+	color:#900;
+}
